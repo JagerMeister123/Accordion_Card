@@ -1,3 +1,72 @@
 *{
-    font-size:medium;
+    margin: 0;
+    padding: 0;}
+
+@font-face {
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+h1 {
+    color: hsl(238, 29%, 16%);
+    padding: 3px;
+}
+
+body {
+    background-image: linear-gradient(hsl(273, 75%, 66%),hsl(240, 73%, 65%));
+}
+
+
+
+
+
+
+.Everything {
+    height: 50%;
+    width: 50%;
+    border-radius: 5px;
+    position: absolute;
+    top : 50%;
+    left : 50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+
+}
+
+
+
+
+.question {
+    font-family: "Kumbh Sans";
+    font-weight: 700;
+    font-size: 15px;
+    color: hsl(237, 12%, 33%);
+}
+
+.question:hover {
+    color : hsl(14, 88%, 65%);
+}
+
+.answer {
+    font-family: "Kumbh Sans";
+    font-weight: 400;
+    font-size: 12px;
+    color: hsl(240, 6%, 50%);
+}
+
+
+#atbox {
+    position :absolute;
+    top: 30%;
+    left: 5%;
+}
+
+
+.arrow{
+    float: right;
+}
+
+hr {
+    size: 2px;
+    color: hsl(240, 6%, 50%);
+    background-color: hsl(240, 6%, 50%);
 }
