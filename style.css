@@ -1,81 +1,187 @@
-*{
-    margin: 0;
+* {
     padding: 0;
-}
-
-
-h1 {
-    color: hsl(238, 29%, 16%);
-    padding: 3px;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 body {
+    font-family: "Kumbh Sans", Arial, sans-serif;
     background-image: linear-gradient(hsl(273, 75%, 66%),hsl(240, 73%, 65%));
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-size: 13px;
 }
 
-
-#Card {
-    display: flex;
-    gap : 4rem;
-    flex-shrink: 0;
+.card {
+    margin: 0 24px;
     background-color: white;
-    border-radius: 20px;
-    margin: 7em;
-    margin-left: 20em;
-    max-width: 60em;
-    min-height: 29em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    position: relative;
+    min-height: 500px;
+    border-radius: 1.5em;
+    width: 60%;
+    max-width: 100%;
 }
 
+#images {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
 
+#image1 {
+    position: absolute;
+    background: url(images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: cover;
+    height: 1014px;
+    width: 80%;
+    margin-top: -70%;
+    margin-left: 4%;
 
-
-@media (min-width: 56em) {
-
-#Card {
-    display: flex;
-}}
-
-#woman_img {
 
 }
 
-#FAQ_Card {
-    font-family: "Kumbh Sans" , Arial;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
+#image2 {
+    position: absolute;
+    background: url(images/illustration-woman-online-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right center;
+    height: 100%;
+    width: 95%;
+    margin-top: 10px;
+    margin-left: -12%;
+}
+
+#atbox {
+    position: absolute;
+    background-image: url("images/illustration-box-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right center;
+    width: 100%;
+    height: 100%;
+    top : 9%;
+    left: -16%;
+}
+
+#atbox {
+    max-width: 18vw; 
+}
+
+#FAQ_card {
+    flex: 1;
+}
+
+#Q_As {
+    margin-right: 6rem;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 2rem;
+    padding-top: 4rem;
+    padding-bottom: 1rem;
+    padding-left: 0.8rem;
 }
 
 .question {
-    font-weight: 700;
-    font-size: 15px;
-    color: hsl(237, 12%, 33%);
+    padding : 1rem;
+    border-bottom: 2px solid hsl(240, 5%, 91%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    vertical-align: middle;
+    cursor: pointer;
 }
+
 
 .question:hover {
     color : hsl(14, 88%, 65%);
 }
 
 .answer {
-    font-weight: 400;
-    font-size: 12px;
-    color: hsl(240, 6%, 50%);
+    display: none;
+}
+
+.show {
+    display: block;
 }
 
 
-#atbox {
-    position: absolute;
-    top: 19%;
-    left: -1%;
+@media (max-width: 500px) {
+    #atbox {
+        display: none;
+    }
+
+    body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        overflow: visible;
+        background-size: contain;
+        width: 150%;
+        height: 100%;
+        margin: 1rem -6rem 0 ;
+    }
+
+    .card {
+        flex-direction: column;
+        overflow: visible;
+    }
+
+    #images {
+        position: relative;
+        display: flex;
+        overflow: visible;
+        justify-content: center;
+    }
+
+    #image1 {
+        position: absolute;
+        background: url(images/bg-pattern-mobile.svg);
+        background-repeat: no-repeat;
+        background-position: right center;
+        background-size: contain;
+        max-width: 250px;
+        max-height: 250px;
+        margin: 0;
+        top: -70px;
+    }
+
+    #image2 {
+        position: absolute;
+        margin: 0;
+        background: url(images/illustration-woman-online-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+        height: 250px;
+        max-width: 250px;
+        top : -140px;
+        z-index: 5;
+        
     }
 
 
-.arrow{
-    float: right;
-}
+    #FAQ_card {
+        position: absolute;
+        left : 4rem;
+        flex: 1;
+        display: flex;
+        justify-content: space-between;}
 
-hr {
-    size: 2px;
-    color: hsl(240, 6%, 50%);
-    background-color: hsl(240, 6%, 50%);
+
+    h1 {
+        text-align: center;
+        top : 3rem;
+    }
 }
